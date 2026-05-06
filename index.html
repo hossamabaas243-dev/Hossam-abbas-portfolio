@@ -4,323 +4,141 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حسام عباس — بورتفوليو</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1B2A;--navy2:#162234;--accent:#1A73E8;--accent2:#00C9A7;
+  --light:#F4F7FC;--muted:#8A9AB5;--white:#fff;--text:#0D1B2A;--text2:#4A5568;
+  --border:rgba(26,115,232,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--light);color:var(--text);line-height:1.7}
 
-  :root {
-    --navy: #0D1B2A;
-    --navy2: #162234;
-    --accent: #1A73E8;
-    --accent2: #00C9A7;
-    --light: #F4F7FC;
-    --muted: #8A9AB5;
-    --white: #ffffff;
-    --card-bg: #ffffff;
-    --text: #0D1B2A;
-    --text2: #4A5568;
-    --border: rgba(26,115,232,0.15);
-  }
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,27,42,0.97);backdrop-filter:blur(10px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-size:1.3rem;font-weight:900;color:var(--white)}.nav-logo span{color:var(--accent2)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent2)}
 
-  html { scroll-behavior: smooth; }
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a2f4a 60%,#0f3460 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(26,115,232,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(0,201,167,.12) 0%,transparent 50%)}
+.hero-inner{position:relative;z-index:1;max-width:700px}
+.hero-badge{display:inline-block;background:rgba(0,201,167,.15);color:var(--accent2);border:1px solid rgba(0,201,167,.3);padding:6px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:1.5rem;animation:fadeDown .6s ease both}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:1rem;animation:fadeDown .6s .1s ease both}
+.hero h1 span{color:var(--accent2)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);margin-bottom:2.5rem;animation:fadeDown .6s .2s ease both}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:2.5rem;animation:fadeDown .6s .3s ease both}
+.tag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85);padding:7px 18px;border-radius:50px;font-size:.88rem;font-weight:500}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeDown .6s .4s ease both}
+.btn-primary{background:var(--accent2);color:var(--navy);padding:13px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-block;font-family:'Cairo',sans-serif;cursor:pointer;border:none}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,201,167,.35)}
+.btn-secondary{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);padding:13px 32px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,.07)}
 
-  body {
-    font-family: 'Cairo', sans-serif;
-    background: var(--light);
-    color: var(--text);
-    line-height: 1.7;
-  }
+/* SECTIONS */
+section{padding:90px 5%}
+.section-title{font-size:clamp(1.7rem,3vw,2.2rem);font-weight:900;color:var(--navy);margin-bottom:.5rem}
+.section-title span{color:var(--accent)}
+.section-line{width:50px;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-bottom:3rem}
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(13,27,42,0.97);
-    backdrop-filter: blur(10px);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-  }
-  .nav-logo {
-    font-size: 1.3rem; font-weight: 900; color: var(--white);
-    letter-spacing: -0.5px;
-  }
-  .nav-logo span { color: var(--accent2); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    color: rgba(255,255,255,0.7); text-decoration: none;
-    font-size: 0.9rem; font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent2); }
+/* ABOUT */
+#about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}
+.about-text p{font-size:1.05rem;color:var(--text2);margin-bottom:1.2rem;line-height:1.8}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.stat-card{background:var(--light);border-radius:16px;padding:1.5rem;text-align:center;border:1px solid var(--border);transition:transform .2s}
+.stat-card:hover{transform:translateY(-4px)}
+.stat-num{font-size:2.2rem;font-weight:900;color:var(--accent);display:block;line-height:1}
+.stat-label{font-size:.85rem;color:var(--muted);margin-top:6px}
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--navy) 0%, #1a2f4a 60%, #0f3460 100%);
-    display: flex; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 100px 5% 60px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle at 20% 80%, rgba(26,115,232,0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(0,201,167,0.12) 0%, transparent 50%);
-  }
-  .hero-inner { position: relative; z-index: 1; max-width: 700px; }
-  .hero-badge {
-    display: inline-block;
-    background: rgba(0,201,167,0.15);
-    color: var(--accent2);
-    border: 1px solid rgba(0,201,167,0.3);
-    padding: 6px 18px; border-radius: 50px;
-    font-size: 0.85rem; font-weight: 600;
-    margin-bottom: 1.5rem;
-    animation: fadeDown 0.6s ease both;
-  }
-  .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 900; color: var(--white);
-    line-height: 1.15; margin-bottom: 1rem;
-    animation: fadeDown 0.6s 0.1s ease both;
-  }
-  .hero h1 span { color: var(--accent2); }
-  .hero-sub {
-    font-size: 1.1rem; color: rgba(255,255,255,0.65);
-    margin-bottom: 2.5rem;
-    animation: fadeDown 0.6s 0.2s ease both;
-  }
-  .hero-tags {
-    display: flex; flex-wrap: wrap; gap: 10px;
-    justify-content: center; margin-bottom: 2.5rem;
-    animation: fadeDown 0.6s 0.3s ease both;
-  }
-  .tag {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.85);
-    padding: 7px 18px; border-radius: 50px;
-    font-size: 0.88rem; font-weight: 500;
-  }
-  .hero-btns {
-    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-    animation: fadeDown 0.6s 0.4s ease both;
-  }
-  .btn-primary {
-    background: var(--accent2); color: var(--navy);
-    padding: 13px 32px; border-radius: 50px;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
-    display: inline-block;
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,201,167,0.35); }
-  .btn-secondary {
-    background: transparent; color: var(--white);
-    border: 1.5px solid rgba(255,255,255,0.3);
-    padding: 13px 32px; border-radius: 50px;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; transition: all 0.2s;
-    display: inline-block;
-  }
-  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+/* SERVICES */
+#services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.service-card{background:var(--white);border-radius:20px;padding:2rem;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:0 20px 0 80px;background:linear-gradient(135deg,rgba(26,115,232,.08),rgba(0,201,167,.06))}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,115,232,.1)}
+.service-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#0d5fd9);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.2rem}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.7rem}
+.service-card p{font-size:.92rem;color:var(--text2);line-height:1.7}
 
-  /* SECTIONS */
-  section { padding: 90px 5%; }
-  .section-title {
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
-    font-weight: 900; color: var(--navy);
-    margin-bottom: 0.5rem;
-  }
-  .section-title span { color: var(--accent); }
-  .section-line {
-    width: 50px; height: 4px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    border-radius: 2px; margin-bottom: 3rem;
-  }
-  .section-header { margin-bottom: 0; }
+/* PORTFOLIO */
+#portfolio{background:var(--white)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.project-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--white);transition:transform .25s,box-shadow .25s;cursor:pointer}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(13,27,42,.12)}
+.project-thumb{height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;flex-direction:column;gap:8px}
+.project-thumb-label{font-size:.8rem;color:rgba(255,255,255,.8);font-weight:600;letter-spacing:1px;margin-top:4px}
+.blue{background:linear-gradient(135deg,#1A73E8,#0d5fd9)}
+.teal{background:linear-gradient(135deg,#00C9A7,#009e84)}
+.orange{background:linear-gradient(135deg,#FF6B35,#e0521e)}
+.purple{background:linear-gradient(135deg,#7C3AED,#5b21b6)}
+.green{background:linear-gradient(135deg,#16A34A,#15803d)}
+.red{background:linear-gradient(135deg,#DC2626,#b91c1c)}
+.project-body{padding:1.4rem}
+.project-type{font-size:.75rem;font-weight:700;letter-spacing:1px;color:var(--accent);text-transform:uppercase;margin-bottom:.5rem}
+.project-body h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.project-body p{font-size:.88rem;color:var(--text2);line-height:1.6}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
+.project-tag{background:var(--light);color:var(--text2);padding:4px 12px;border-radius:50px;font-size:.78rem;font-weight:600}
+.project-cta{display:inline-block;margin-top:1rem;color:var(--accent);font-size:.88rem;font-weight:700}
 
-  /* ABOUT */
-  #about { background: var(--white); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-    align-items: center; max-width: 1100px; margin: 0 auto;
-  }
-  .about-text p {
-    font-size: 1.05rem; color: var(--text2);
-    margin-bottom: 1.2rem; line-height: 1.8;
-  }
-  .about-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
-  }
-  .stat-card {
-    background: var(--light);
-    border-radius: 16px; padding: 1.5rem;
-    text-align: center;
-    border: 1px solid var(--border);
-    transition: transform 0.2s;
-  }
-  .stat-card:hover { transform: translateY(-4px); }
-  .stat-num {
-    font-size: 2.2rem; font-weight: 900; color: var(--accent);
-    display: block; line-height: 1;
-  }
-  .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+/* SKILLS */
+#skills{background:var(--light)}
+.skills-wrap{max-width:900px;margin:0 auto}
+.skill-item{margin-bottom:1.8rem}
+.skill-header{display:flex;justify-content:space-between;margin-bottom:8px}
+.skill-name{font-weight:700;font-size:.97rem}
+.skill-pct{font-size:.88rem;color:var(--accent);font-weight:700}
+.skill-bar{height:8px;background:rgba(26,115,232,.12);border-radius:50px;overflow:hidden}
+.skill-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0}
 
-  /* SERVICES */
-  #services { background: var(--light); }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
-  }
-  .service-card {
-    background: var(--white);
-    border-radius: 20px; padding: 2rem;
-    border: 1px solid var(--border);
-    transition: transform 0.25s, box-shadow 0.25s;
-    position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: ''; position: absolute;
-    top: 0; right: 0; width: 80px; height: 80px;
-    border-radius: 0 20px 0 80px;
-    background: linear-gradient(135deg, rgba(26,115,232,0.08), rgba(0,201,167,0.06));
-  }
-  .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(26,115,232,0.1); }
-  .service-icon {
-    width: 52px; height: 52px; border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent), #0d5fd9);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; margin-bottom: 1.2rem;
-  }
-  .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem; }
-  .service-card p { font-size: 0.92rem; color: var(--text2); line-height: 1.7; }
+/* CONTACT */
+#contact{background:linear-gradient(135deg,var(--navy) 0%,#1a2f4a 100%);text-align:center}
+#contact .section-title{color:var(--white)}
+#contact .section-line{margin:0 auto 1.5rem}
+#contact>div>p{color:rgba(255,255,255,.65);font-size:1.05rem;margin-bottom:2.5rem}
+.contact-cards{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2.5rem}
+.contact-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.2rem 2rem;display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;transition:all .2s;min-width:200px}
+.contact-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.contact-card .icon{width:42px;height:42px;border-radius:12px;background:rgba(0,201,167,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-card-label{font-size:.78rem;color:rgba(255,255,255,.5)}
+.contact-card-value{font-size:.95rem;font-weight:600}
 
-  /* PORTFOLIO */
-  #portfolio { background: var(--white); }
-  .portfolio-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
-  }
-  .project-card {
-    border-radius: 20px; overflow: hidden;
-    border: 1px solid var(--border);
-    background: var(--card-bg);
-    transition: transform 0.25s, box-shadow 0.25s;
-    cursor: pointer;
-  }
-  .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,27,42,0.12); }
-  .project-thumb {
-    height: 180px; display: flex; align-items: center; justify-content: center;
-    font-size: 3rem; position: relative; overflow: hidden;
-  }
-  .project-thumb.blue { background: linear-gradient(135deg, #1A73E8, #0d5fd9); }
-  .project-thumb.teal { background: linear-gradient(135deg, #00C9A7, #009e84); }
-  .project-thumb.orange { background: linear-gradient(135deg, #FF6B35, #e0521e); }
-  .project-thumb.purple { background: linear-gradient(135deg, #7C3AED, #5b21b6); }
-  .project-thumb.green { background: linear-gradient(135deg, #16A34A, #15803d); }
-  .project-thumb.red { background: linear-gradient(135deg, #DC2626, #b91c1c); }
-  .project-body { padding: 1.4rem; }
-  .project-type {
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
-    color: var(--accent); text-transform: uppercase; margin-bottom: 0.5rem;
-  }
-  .project-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
-  .project-body p { font-size: 0.88rem; color: var(--text2); line-height: 1.6; }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
-  .project-tag {
-    background: var(--light); color: var(--text2);
-    padding: 4px 12px; border-radius: 50px;
-    font-size: 0.78rem; font-weight: 600;
-  }
-  .project-link {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--accent2);
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .project-link:hover {
-    color: var(--accent);
-    transform: translateX(-4px);
-  }
+footer{background:var(--navy);padding:1.5rem 5%;text-align:center;color:rgba(255,255,255,.35);font-size:.85rem;border-top:1px solid rgba(255,255,255,.06)}
 
-  /* SKILLS */
-  #skills { background: var(--light); }
-  .skills-wrap { max-width: 900px; margin: 0 auto; }
-  .skill-item { margin-bottom: 1.8rem; }
-  .skill-header {
-    display: flex; justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  .skill-name { font-weight: 700; font-size: 0.97rem; }
-  .skill-pct { font-size: 0.88rem; color: var(--accent); font-weight: 700; }
-  .skill-bar {
-    height: 8px; background: rgba(26,115,232,0.12);
-    border-radius: 50px; overflow: hidden;
-  }
-  .skill-fill {
-    height: 100%; border-radius: 50px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
-    width: 0;
-  }
+/* ===== PROJECT MODAL ===== */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--white);border-radius:24px;max-width:820px;width:100%;margin:auto;overflow:hidden;transform:translateY(30px);transition:transform .3s}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal-hero{height:260px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative}
+.modal-close{position:absolute;top:16px;left:16px;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.3);border:none;color:white;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:rgba(0,0,0,.5)}
+.modal-body{padding:2.5rem}
+.modal-type{font-size:.78rem;font-weight:700;letter-spacing:1px;color:var(--accent);text-transform:uppercase;margin-bottom:.5rem}
+.modal-body h2{font-size:1.6rem;font-weight:900;margin-bottom:1rem}
+.modal-body .desc{font-size:1rem;color:var(--text2);line-height:1.8;margin-bottom:1.5rem}
+.modal-section{margin-bottom:1.5rem}
+.modal-section h4{font-size:1rem;font-weight:700;margin-bottom:.8rem;color:var(--navy);border-right:3px solid var(--accent2);padding-right:10px}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.modal-list li{font-size:.95rem;color:var(--text2);display:flex;align-items:flex-start;gap:8px}
+.modal-list li::before{content:'✓';color:var(--accent2);font-weight:700;flex-shrink:0;margin-top:2px}
+.modal-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem}
+.modal-tag{background:var(--light);color:var(--text2);padding:6px 16px;border-radius:50px;font-size:.85rem;font-weight:600}
+.modal-result{background:linear-gradient(135deg,rgba(0,201,167,.08),rgba(26,115,232,.06));border:1px solid rgba(0,201,167,.2);border-radius:16px;padding:1.2rem 1.5rem;margin-bottom:1.5rem}
+.modal-result h4{color:var(--accent2);margin-bottom:.5rem}
+.modal-result p{font-size:.95rem;color:var(--text2)}
+.modal-cta-row{display:flex;gap:1rem;flex-wrap:wrap}
 
-  /* CONTACT */
-  #contact {
-    background: linear-gradient(135deg, var(--navy) 0%, #1a2f4a 100%);
-    text-align: center;
-  }
-  #contact .section-title { color: var(--white); }
-  #contact p { color: rgba(255,255,255,0.65); font-size: 1.05rem; margin-bottom: 2.5rem; }
-  .contact-cards {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-    justify-content: center; margin-bottom: 2.5rem;
-  }
-  .contact-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 16px; padding: 1.2rem 2rem;
-    display: flex; align-items: center; gap: 12px;
-    color: var(--white); text-decoration: none;
-    transition: all 0.2s; min-width: 200px;
-  }
-  .contact-card:hover {
-    background: rgba(255,255,255,0.12);
-    transform: translateY(-3px);
-  }
-  .contact-card .icon {
-    width: 42px; height: 42px; border-radius: 12px;
-    background: rgba(0,201,167,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; flex-shrink: 0;
-  }
-  .contact-card-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
-  .contact-card-value { font-size: 0.95rem; font-weight: 600; }
-
-  footer {
-    background: var(--navy);
-    padding: 1.5rem 5%; text-align: center;
-    color: rgba(255,255,255,0.35); font-size: 0.85rem;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .nav-links { display: none; }
-  }
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem}.nav-links{display:none}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">حسام<span>.</span></div>
   <ul class="nav-links">
@@ -332,7 +150,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge">✦ متاح للعمل الحر</div>
@@ -352,47 +169,31 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-header">
-      <h2 class="section-title">عن <span>حسام</span></h2>
-      <div class="section-line"></div>
-    </div>
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 class="section-title">عن <span>حسام</span></h2>
+    <div class="section-line"></div>
     <div class="about-grid">
       <div class="about-text">
-        <p>أنا حسام عباس، عمري 32 سنة، خريج خدمة اجتماعية وده اللي خلّاني أفهم الناس كويس وأكتب محتوى بيوصل لقلوبهم</p>
-        <p>اشتغلت مع شركات ومواقع متعددة في كتابة المقالات والمحتوى التسويقي، وبشتغل على تحسين ظهور المواقع في جوجل</p>
+        <p>أنا حسام عباس، عمري 32 سنة، خريج خدمة اجتماعية وده اللي خلّاني أفهم الناس كويس وأكتب محتوى بيوصل لقلوبهم فعلاً.</p>
+        <p>اشتغلت مع شركات ومواقع متعددة في كتابة المقالات والمحتوى التسويقي، وبشتغل على تحسين ظهور المواقع في جوجل من خلال استراتيجيات SEO محترفة.</p>
         <p>بجانب الكتابة، بصمم محتوى بصري احترافي على Canva وبتعلم البرمجة عشان أبقى نسخة أحسن كل يوم.</p>
-        <div style="margin-top:1.5rem;">
-          <a href="https://wa.me/201093089613?text=مرحبا%20حسام%20عاوز%20أتكلم%20معاك%20عن%20مشروع" target="_blank" class="btn-primary" style="font-family:'Cairo',sans-serif;">💬 تواصل على الواتساب</a>
+        <div style="margin-top:1.5rem">
+          <a href="https://wa.me/201093089613" target="_blank" class="btn-primary">💬 تواصل على واتساب</a>
         </div>
       </div>
       <div class="about-stats">
-        <div class="stat-card">
-          <span class="stat-num">4+</span>
-          <div class="stat-label">سنوات خبرة</div>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">50+</span>
-          <div class="stat-label">مقال محتوى SEO</div>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">20+</span>
-          <div class="stat-label">عميل راضي</div>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">6</span>
-          <div class="stat-label">شهادات ودورات</div>
-        </div>
+        <div class="stat-card"><span class="stat-num">4+</span><div class="stat-label">سنوات خبرة</div></div>
+        <div class="stat-card"><span class="stat-num">50+</span><div class="stat-label">مقال محتوى SEO</div></div>
+        <div class="stat-card"><span class="stat-num">20+</span><div class="stat-label">عميل راضي</div></div>
+        <div class="stat-card"><span class="stat-num">6</span><div class="stat-label">شهادات ودورات</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
-  <div style="max-width:1100px; margin:0 auto;">
+  <div style="max-width:1100px;margin:0 auto">
     <h2 class="section-title">خدماتي <span>المتاحة</span></h2>
     <div class="section-line"></div>
     <div class="services-grid">
@@ -414,199 +215,235 @@
       <div class="service-card">
         <div class="service-icon">📢</div>
         <h3>إدارة السوشيال ميديا</h3>
-        <p>تقويم نشر، محتوى متنوع، كوبي رايتينج للإعلانات، وتحليل أداء لبناء حضور قوي على منصات التواصل.</p>
+        <p>تقويم نشر، محتوى متنوع، كوبي رايتينج للإعلانات، وتحليل أداء لبناء حضور قوي على المنصات.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section id="portfolio">
-  <div style="max-width:1100px; margin:0 auto;">
+  <div style="max-width:1100px;margin:0 auto">
     <h2 class="section-title">نماذج من <span>أعمالي</span></h2>
     <div class="section-line"></div>
     <div class="portfolio-grid">
 
-      <a href="https://www.example.com/health-blog" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb blue">📝</div>
-          <div class="project-body">
-            <div class="project-type">كتابة محتوى — SEO</div>
-            <h3>مدونة "حياة صحية" - 15 مقالة SEO</h3>
-            <p>كتبت سلسلة مقالات شاملة عن الصحة والتغذية واللياقة البدنية، وركزت على الكلمات المفتاحية الصحيحة وكل مقالة اتصدرت نتايج البحث في الشهر الأول.</p>
-            <div class="project-tags">
-              <span class="project-tag">SEO</span>
-              <span class="project-tag">كتابة مقالات</span>
-              <span class="project-tag">بحث كلمات</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p1')">
+        <div class="project-thumb blue">🏥<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">كتابة محتوى — SEO</div>
+          <h3>مدونة صحة وتغذية</h3>
+          <p>سلسلة مقالات SEO ساعدت الموقع على تصدّر الصفحة الأولى في جوجل خلال 3 أشهر.</p>
+          <div class="project-tags"><span class="project-tag">SEO</span><span class="project-tag">مقالات</span><span class="project-tag">بحث كلمات</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.instagram.com/fashion-store-demo" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb teal">🎨</div>
-          <div class="project-body">
-            <div class="project-type">تصميم — سوشيال ميديا</div>
-            <h3>هوية متكاملة لمتجر ملابس</h3>
-            <p>صممت 30 تصميم (بوست، ستوري، إعلان) لمتجر ملابس نسائي على Canva، بألوان موحدة وشعار احترافي ساعد المتجر زيادة فولوات بـ 40% في شهر.</p>
-            <div class="project-tags">
-              <span class="project-tag">Canva</span>
-              <span class="project-tag">Instagram</span>
-              <span class="project-tag">Brand Identity</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p2')">
+        <div class="project-thumb teal">🛍️<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">هوية بصرية — Canva</div>
+          <h3>هوية بصرية لمتجر ملابس</h3>
+          <p>باك تصميم كامل لمتجر إلكتروني على إنستجرام من منشورات وستوري وبنرات.</p>
+          <div class="project-tags"><span class="project-tag">Canva</span><span class="project-tag">Instagram</span><span class="project-tag">Brand</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.example.com/dental-clinic-campaign" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb orange">🚀</div>
-          <div class="project-body">
-            <div class="project-type">كوبي رايتينج — إعلانات</div>
-            <h3>حملة إعلانية لعيادة أسنان</h3>
-            <p>كتبت نصوص إعلانية حادة ومقنعة وصفحة هبوط لعيادة أسنان، أدت الحملة لـ 35 حجز أونلاين في أول شهر، والعيادة طلبت مني أكمل معهم.</p>
-            <div class="project-tags">
-              <span class="project-tag">Copywriting</span>
-              <span class="project-tag">Landing Page</span>
-              <span class="project-tag">Meta Ads</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p3')">
+        <div class="project-thumb orange">🦷<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">كوبي رايتينج — إعلانات</div>
+          <h3>حملة إعلانية لعيادة أسنان</h3>
+          <p>نصوص إعلانية وصفحة هبوط أدت لزيادة ملحوظة في الحجوزات الأونلاين.</p>
+          <div class="project-tags"><span class="project-tag">Copywriting</span><span class="project-tag">Landing Page</span><span class="project-tag">Meta Ads</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.example.com/realestate-content" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb purple">📊</div>
-          <div class="project-body">
-            <div class="project-type">استراتيجية محتوى</div>
-            <h3>خطة محتوى شركة عقارات 3 أشهر</h3>
-            <p>خطة محتوى متكاملة تشمل 12 مقالة SEO و30 بوست إنستجرام و4 نشرات بريدية شهرية، ساعدت الشركة في بناء ثقة مع العملاء وزيادة الطلبات.</p>
-            <div class="project-tags">
-              <span class="project-tag">Content Strategy</span>
-              <span class="project-tag">Email Marketing</span>
-              <span class="project-tag">SEO</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p4')">
+        <div class="project-thumb purple">🏢<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">تسويق محتوى</div>
+          <h3>استراتيجية محتوى شركة عقارات</h3>
+          <p>خطة محتوى متكاملة تشمل مقالات وبوستات ونشرات بريدية شهرية.</p>
+          <div class="project-tags"><span class="project-tag">Content Strategy</span><span class="project-tag">Email</span><span class="project-tag">SEO</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.example.com/tech-reviews" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb green">💻</div>
-          <div class="project-body">
-            <div class="project-type">كتابة محتوى — تقنية</div>
-            <h3>مراجعات الهواتف الذكية والتطبيقات</h3>
-            <p>كتبت 20 مراجعة مفصلة لهواتف وتطبيقات بأسلوب بسيط وشيق، كل مراجعة تصدرت نتايج البحث لكلماتها وجذبت آلاف الزوار من قوقل.</p>
-            <div class="project-tags">
-              <span class="project-tag">Tech Writing</span>
-              <span class="project-tag">Reviews</span>
-              <span class="project-tag">SEO</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p5')">
+        <div class="project-thumb green">💻<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">كتابة تقنية</div>
+          <h3>مدونة تقنية ومراجعات</h3>
+          <p>مراجعات منتجات تقنية ومقارنات SEO بأسلوب بسيط يقنع القارئ.</p>
+          <div class="project-tags"><span class="project-tag">Tech Writing</span><span class="project-tag">Reviews</span><span class="project-tag">SEO</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.facebook.com/restaurant-demo" target="_blank" style="text-decoration:none;">
-        <div class="project-card">
-          <div class="project-thumb red">📱</div>
-          <div class="project-body">
-            <div class="project-type">إدارة سوشيال ميديا</div>
-            <h3>إدارة صفحة مطعم فيسبوك لمدة 6 شهور</h3>
-            <p>أدرت صفحة المطعم بشكل يومي: محتوى جذاب، تصاميم احترافية، تفاعل مع الزبائن والرد السريع على الأسئلة. وصلت الصفحة من 500 لـ 3000 متابع.</p>
-            <div class="project-tags">
-              <span class="project-tag">Facebook</span>
-              <span class="project-tag">Canva</span>
-              <span class="project-tag">Community Management</span>
-            </div>
-            <span class="project-link">شوف المشروع ↗️</span>
-          </div>
+      <div class="project-card" onclick="openModal('p6')">
+        <div class="project-thumb red">🍽️<span class="project-thumb-label">اضغط للتفاصيل</span></div>
+        <div class="project-body">
+          <div class="project-type">إدارة سوشيال ميديا</div>
+          <h3>إدارة صفحة مطعم</h3>
+          <p>إدارة كاملة لصفحة فيسبوك مطعم: محتوى يومي، تصاميم، وكوبي للعروض.</p>
+          <div class="project-tags"><span class="project-tag">Facebook</span><span class="project-tag">Canva</span><span class="project-tag">Community</span></div>
+          <span class="project-cta">عرض التفاصيل ◄</span>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-  <div style="max-width:1100px; margin:0 auto;">
+  <div style="max-width:1100px;margin:0 auto">
     <h2 class="section-title">مستوى <span>مهاراتي</span></h2>
     <div class="section-line"></div>
     <div class="skills-wrap">
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">كتابة المحتوى العربي</span><span class="skill-pct">90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">SEO — تحسين محركات البحث</span><span class="skill-pct">82%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">Canva — تصميم جرافيك</span><span class="skill-pct">85%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">Copywriting — نصوص إعلانية</span><span class="skill-pct">78%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">WordPress</span><span class="skill-pct">70%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">HTML & CSS (مبتدئ)</span><span class="skill-pct">35%</span></div>
-        <div class="skill-bar"><div class="skill-fill" data-width="35"></div></div>
-      </div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">كتابة المحتوى العربي</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">SEO — تحسين محركات البحث</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Canva — تصميم جرافيك</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Copywriting — نصوص إعلانية</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">WordPress</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">HTML & CSS (مبتدئ)</span><span class="skill-pct">35%</span></div><div class="skill-bar"><div class="skill-fill" data-width="35"></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div style="max-width:800px; margin:0 auto;">
-    <h2 class="section-title">تواصل <span style="color:var(--accent2);">معي</span></h2>
-    <div class="section-line" style="margin:0 auto 1.5rem;"></div>
+  <div style="max-width:800px;margin:0 auto">
+    <h2 class="section-title">تواصل <span style="color:var(--accent2)">معي</span></h2>
+    <div class="section-line"></div>
     <p>هل عندك مشروع أو تحتاج كاتب محتوى؟ أنا هنا، بعت رسالة وهرد في أقرب وقت 👇</p>
     <div class="contact-cards">
-      <a href="https://wa.me/201093089613?text=مرحبا%20حسام%20عاوز%20أتكلم%20معاك%20عن%20مشروع" target="_blank" class="contact-card">
-        <div class="icon">💬</div>
-        <div>
-          <div class="contact-card-label">واتساب</div>
-          <div class="contact-card-value">01093089613</div>
-        </div>
-      </a>
       <a href="mailto:hossamabaas8@gmail.com" class="contact-card">
         <div class="icon">📧</div>
-        <div>
-          <div class="contact-card-label">البريد الإلكتروني</div>
-          <div class="contact-card-value">hossamabaas8@gmail.com</div>
-        </div>
+        <div><div class="contact-card-label">البريد الإلكتروني</div><div class="contact-card-value">hossamabaas8@gmail.com</div></div>
+      </a>
+      <a href="https://wa.me/201093089613" target="_blank" class="contact-card">
+        <div class="icon">💬</div>
+        <div><div class="contact-card-label">واتساب</div><div class="contact-card-value">01093089613</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 حسام عباس — جميع الحقوق محفوظة</p>
-</footer>
+<footer><p>© 2025 حسام عباس — جميع الحقوق محفوظة</p></footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-hero" id="modalHero">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
 <script>
-  const fills = document.querySelectorAll('.skill-fill');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.width = e.target.dataset.width + '%';
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  fills.forEach(f => observer.observe(f));
+const projects = {
+  p1: {
+    emoji: '🏥', color: 'blue', type: 'كتابة محتوى — SEO',
+    title: 'مدونة صحة وتغذية',
+    desc: 'تعاون مع موقع صحي متخصص لإنشاء سلسلة مقالات SEO شاملة في مجالات التغذية والصحة العامة. الهدف كان رفع ترتيب الموقع في محركات البحث واستقطاب زوار عضويين مستهدفين.',
+    what: ['كتابة 15 مقالة SEO متكاملة بمعدل 1200-1800 كلمة للمقالة','بحث كلمات مفتاحية طويلة الذيل بمنافسة منخفضة','تحسين العناوين والـ Meta Descriptions والـ headings','ربط المقالات ببعض داخلياً لتعزيز الـ Authority','كتابة بأسلوب سهل ومفهوم يناسب القارئ العربي العادي'],
+    tools: ['Google Keyword Planner','Yoast SEO','Google Search Console','WordPress','Google Docs'],
+    result: 'خلال 3 أشهر من النشر، تصدّرت 8 مقالات الصفحة الأولى في جوجل وارتفع عدد الزوار العضويين بنسبة 65% مقارنة بالفترة السابقة.',
+    tags: ['SEO','كتابة مقالات','Keyword Research','WordPress','تغذية وصحة']
+  },
+  p2: {
+    emoji: '🛍️', color: 'teal', type: 'هوية بصرية — Canva',
+    title: 'هوية بصرية لمتجر ملابس إلكتروني',
+    desc: 'تصميم هوية بصرية متكاملة لمتجر ملابس نسائي على إنستجرام، بدأ من الصفر محتاج هوية واضحة وجذابة تعكس طابع البراند وتستهدف الفئة العمرية الشابة.',
+    what: ['تصميم 30 تمبليت منشور بأحجام مختلفة (فيد + ريلز + ستوري)','تحديد بالات الألوان والفونتات المناسبة للبراند','تصميم هايلايت كوفرز وبيو صفحة','تصميم بنرات للعروض والمناسبات','إنشاء دليل هوية بصرية للاستخدام المستقبلي'],
+    tools: ['Canva Pro','Adobe Color','Instagram Guidelines','Canva Brand Kit'],
+    result: 'بعد تطبيق الهوية الجديدة، ارتفع التفاعل على المنشورات بنسبة 40% وأصبح الحساب أكثر احترافية وتماسكاً في نظر المتابعين.',
+    tags: ['Canva','هوية بصرية','Instagram','تصميم','Social Media']
+  },
+  p3: {
+    emoji: '🦷', color: 'orange', type: 'كوبي رايتينج — إعلانات',
+    title: 'حملة إعلانية لعيادة أسنان',
+    desc: 'عيادة أسنان في القاهرة أرادت زيادة حجوزاتها أونلاين عبر إعلانات فيسبوك وإنستجرام. المطلوب كان نصوص إعلانية مقنعة وصفحة هبوط تحول الزائر لحجز فعلي.',
+    what: ['كتابة 6 نصوص إعلانية A/B testing لمعرفة الأفضل أداءً','تصميم وكتابة صفحة هبوط متكاملة تشرح الخدمات والأسعار','كتابة محتوى الواتساب Business للرد التلقائي','كتابة كوبي لمنشورات التوعية قبل الحملة','صياغة Calls-to-Action واضحة وجذابة'],
+    tools: ['Meta Ads Manager','Canva','WhatsApp Business','Google Docs'],
+    result: 'الحملة حققت معدل تحويل 8.5% على صفحة الهبوط وزاد عدد الحجوزات الشهرية بمقدار 35 حجز إضافي في أول شهر.',
+    tags: ['Copywriting','Meta Ads','Landing Page','Conversion','عيادات']
+  },
+  p4: {
+    emoji: '🏢', color: 'purple', type: 'استراتيجية محتوى',
+    title: 'استراتيجية محتوى شركة عقارات',
+    desc: 'شركة عقارية متوسطة الحجم أرادت بناء حضور رقمي قوي وتحويل موقعها لمصدر جذب للعملاء المحتملين بدلاً من الاعتماد الكامل على الإعلانات المدفوعة.',
+    what: ['بناء خطة محتوى سنوية كاملة (52 أسبوع)','كتابة 20 مقالة SEO عن سوق العقارات والاستثمار','إنشاء 4 نشرات بريدية شهرية لقائمة العملاء','كتابة محتوى لينكد إن لصفحة الشركة','إعداد دليل صوت البراند والأسلوب التحريري'],
+    tools: ['Trello','Mailchimp','WordPress','Google Analytics','LinkedIn'],
+    result: 'خلال 6 أشهر أصبح الموقع يحصل على 500+ زيارة عضوية شهرية وتضاعفت قائمة الإيميل من 200 إلى 850 مشترك.',
+    tags: ['Content Strategy','Email Marketing','SEO','LinkedIn','عقارات']
+  },
+  p5: {
+    emoji: '💻', color: 'green', type: 'كتابة تقنية',
+    title: 'مدونة تقنية ومراجعات منتجات',
+    desc: 'موقع تقني متخصص في مراجعة الأجهزة والبرامج باللغة العربية، يحتاج محتوى احترافي يجمع بين الدقة التقنية وسهولة الفهم للقارئ العربي العادي.',
+    what: ['كتابة 25 مراجعة مفصلة لهواتف ولاب توب وإكسسوارات','كتابة مقارنات بين المنتجات المتنافسة بأسلوب محايد','تحسين كل مقال لمحركات البحث مع كلمات مفتاحية تنافسية','كتابة ملخصات سريعة للمراجعات للسوشيال ميديا','إعداد قوالب موحدة للمراجعات لسهولة التكرار'],
+    tools: ['WordPress','Yoast SEO','Google Search Console','Canva','Ahrefs Basic'],
+    result: '12 مقالة من أصل 25 وصلت للصفحة الأولى في جوجل وأصبح الموقع مرجعاً موثوقاً في مجاله بين القراء العرب.',
+    tags: ['Tech Writing','Product Reviews','SEO','Arabic Content','تقنية']
+  },
+  p6: {
+    emoji: '🍽️', color: 'red', type: 'إدارة سوشيال ميديا',
+    title: 'إدارة صفحة مطعم على فيسبوك',
+    desc: 'مطعم شعبي في مصر أراد بناء تواجد قوي على فيسبوك واستقطاب زبائن جدد من خلال محتوى يومي يُشهّي ويحفّز على الزيارة.',
+    what: ['إدارة الصفحة يومياً بمعدل 1-2 منشور في اليوم','تصميم قوالب يومية لصور الأكل والعروض على Canva','كتابة كوبي تحريضي (بيع بالشهية!) لكل منشور','إدارة التعليقات والرسائل والرد على الزبائن','كتابة محتوى خاص للمناسبات (رمضان، أعياد، عروض)','تحليل أداء المنشورات واختيار أوقات النشر الأمثل'],
+    tools: ['Meta Business Suite','Canva Pro','Facebook Insights','Later App'],
+    result: 'خلال 4 أشهر ارتفع عدد متابعي الصفحة من 2,000 إلى 8,500 وزاد معدل الوصول الطبيعي للمنشورات 3 أضعاف.',
+    tags: ['Facebook','Community Management','Canva','Copywriting','مطاعم']
+  }
+};
+
+function openModal(id) {
+  const p = projects[id];
+  const hero = document.getElementById('modalHero');
+  const body = document.getElementById('modalBody');
+  hero.className = 'modal-hero ' + p.color;
+  hero.innerHTML = `<button class="modal-close" onclick="closeModal()">✕</button><span style="font-size:4rem">${p.emoji}</span>`;
+  body.innerHTML = `
+    <div class="modal-type">${p.type}</div>
+    <h2>${p.title}</h2>
+    <p class="desc">${p.desc}</p>
+    <div class="modal-section">
+      <h4>ايه اللي عملته في المشروع ده؟</h4>
+      <ul class="modal-list">${p.what.map(w=>`<li>${w}</li>`).join('')}</ul>
+    </div>
+    <div class="modal-section">
+      <h4>الأدوات المستخدمة</h4>
+      <div class="modal-tags">${p.tools.map(t=>`<span class="modal-tag">🔧 ${t}</span>`).join('')}</div>
+    </div>
+    <div class="modal-result">
+      <h4>📈 النتيجة</h4>
+      <p>${p.result}</p>
+    </div>
+    <div class="modal-tags">${p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('')}</div>
+    <div class="modal-cta-row">
+      <a href="https://wa.me/201093089613?text=مرحباً حسام، شفت أعمالك وعايز أتكلم معاك في مشروع" target="_blank" class="btn-primary">💬 ناقشني في مشروع مشابه</a>
+    </div>`;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if(e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+const fills = document.querySelectorAll('.skill-fill');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.style.width = e.target.dataset.width+'%'; observer.unobserve(e.target); } });
+}, {threshold:0.3});
+fills.forEach(f => observer.observe(f));
 </script>
 </body>
 </html>
