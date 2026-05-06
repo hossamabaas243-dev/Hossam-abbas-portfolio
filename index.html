@@ -208,6 +208,7 @@
     border: 1px solid var(--border);
     background: var(--card-bg);
     transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
   }
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,27,42,0.12); }
   .project-thumb {
@@ -232,6 +233,18 @@
     background: var(--light); color: var(--text2);
     padding: 4px 12px; border-radius: 50px;
     font-size: 0.78rem; font-weight: 600;
+  }
+  .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent2);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .project-link:hover {
+    color: var(--accent);
+    transform: translateX(-4px);
   }
 
   /* SKILLS */
@@ -352,7 +365,7 @@
         <p>اشتغلت مع شركات ومواقع متعددة في كتابة المقالات والمحتوى التسويقي، وبشتغل على تحسين ظهور المواقع في جوجل</p>
         <p>بجانب الكتابة، بصمم محتوى بصري احترافي على Canva وبتعلم البرمجة عشان أبقى نسخة أحسن كل يوم.</p>
         <div style="margin-top:1.5rem;">
-          <a href="mailto:hossamabaas8@gmail.com" class="btn-primary" style="font-family:'Cairo',sans-serif;">📩 تواصل معي</a>
+          <a href="https://wa.me/201093089613?text=مرحبا%20حسام%20عاوز%20أتكلم%20معاك%20عن%20مشروع" target="_blank" class="btn-primary" style="font-family:'Cairo',sans-serif;">💬 تواصل على الواتساب</a>
         </div>
       </div>
       <div class="about-stats">
@@ -414,89 +427,107 @@
     <div class="section-line"></div>
     <div class="portfolio-grid">
 
-      <div class="project-card">
-        <div class="project-thumb blue">📝</div>
-        <div class="project-body">
-          <div class="project-type">كتابة محتوى — SEO</div>
-          <h3>مدونة "حياة صحية" - 15 مقالة SEO</h3>
-          <p>كتبت سلسلة مقالات شاملة عن الصحة والتغذية واللياقة البدنية، وركزت على الكلمات المفتاحية الصحيحة وكل مقالة اتصدرت نتايج البحث في الشهر الأول.</p>
-          <div class="project-tags">
-            <span class="project-tag">SEO</span>
-            <span class="project-tag">كتابة مقالات</span>
-            <span class="project-tag">بحث كلمات</span>
+      <a href="https://www.example.com/health-blog" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb blue">📝</div>
+          <div class="project-body">
+            <div class="project-type">كتابة محتوى — SEO</div>
+            <h3>مدونة "حياة صحية" - 15 مقالة SEO</h3>
+            <p>كتبت سلسلة مقالات شاملة عن الصحة والتغذية واللياقة البدنية، وركزت على الكلمات المفتاحية الصحيحة وكل مقالة اتصدرت نتايج البحث في الشهر الأول.</p>
+            <div class="project-tags">
+              <span class="project-tag">SEO</span>
+              <span class="project-tag">كتابة مقالات</span>
+              <span class="project-tag">بحث كلمات</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="project-thumb teal">🎨</div>
-        <div class="project-body">
-          <div class="project-type">تصميم — سوشيال ميديا</div>
-          <h3>هوية متكاملة لمتجر ملابس</h3>
-          <p>صممت 30 تصميم (بوست، ستوري، إعلان) لمتجر ملابس نسائي على Canva، بألوان موحدة وشعار احترافي ساعد المتجر زيادة فولوات بـ 40% في شهر.</p>
-          <div class="project-tags">
-            <span class="project-tag">Canva</span>
-            <span class="project-tag">Instagram</span>
-            <span class="project-tag">Brand Identity</span>
+      <a href="https://www.instagram.com/fashion-store-demo" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb teal">🎨</div>
+          <div class="project-body">
+            <div class="project-type">تصميم — سوشيال ميديا</div>
+            <h3>هوية متكاملة لمتجر ملابس</h3>
+            <p>صممت 30 تصميم (بوست، ستوري، إعلان) لمتجر ملابس نسائي على Canva، بألوان موحدة وشعار احترافي ساعد المتجر زيادة فولوات بـ 40% في شهر.</p>
+            <div class="project-tags">
+              <span class="project-tag">Canva</span>
+              <span class="project-tag">Instagram</span>
+              <span class="project-tag">Brand Identity</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="project-thumb orange">🚀</div>
-        <div class="project-body">
-          <div class="project-type">كوبي رايتينج — إعلانات</div>
-          <h3>حملة إعلانية لعيادة أسنان</h3>
-          <p>كتبت نصوص إعلانية حادة ومقنعة وصفحة هبوط لعيادة أسنان، أدت الحملة لـ 35 حجز أونلاين في أول شهر، والعيادة طلبت مني أكمل معهم.</p>
-          <div class="project-tags">
-            <span class="project-tag">Copywriting</span>
-            <span class="project-tag">Landing Page</span>
-            <span class="project-tag">Meta Ads</span>
+      <a href="https://www.example.com/dental-clinic-campaign" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb orange">🚀</div>
+          <div class="project-body">
+            <div class="project-type">كوبي رايتينج — إعلانات</div>
+            <h3>حملة إعلانية لعيادة أسنان</h3>
+            <p>كتبت نصوص إعلانية حادة ومقنعة وصفحة هبوط لعيادة أسنان، أدت الحملة لـ 35 حجز أونلاين في أول شهر، والعيادة طلبت مني أكمل معهم.</p>
+            <div class="project-tags">
+              <span class="project-tag">Copywriting</span>
+              <span class="project-tag">Landing Page</span>
+              <span class="project-tag">Meta Ads</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="project-thumb purple">📊</div>
-        <div class="project-body">
-          <div class="project-type">استراتيجية محتوى</div>
-          <h3>خطة محتوى شركة عقارات 3 أشهر</h3>
-          <p>خطة محتوى متكاملة تشمل 12 مقالة SEO و30 بوست إنستجرام و4 نشرات بريدية شهرية، ساعدت الشركة في بناء ثقة مع العملاء وزيادة الطلبات.</p>
-          <div class="project-tags">
-            <span class="project-tag">Content Strategy</span>
-            <span class="project-tag">Email Marketing</span>
-            <span class="project-tag">SEO</span>
+      <a href="https://www.example.com/realestate-content" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb purple">📊</div>
+          <div class="project-body">
+            <div class="project-type">استراتيجية محتوى</div>
+            <h3>خطة محتوى شركة عقارات 3 أشهر</h3>
+            <p>خطة محتوى متكاملة تشمل 12 مقالة SEO و30 بوست إنستجرام و4 نشرات بريدية شهرية، ساعدت الشركة في بناء ثقة مع العملاء وزيادة الطلبات.</p>
+            <div class="project-tags">
+              <span class="project-tag">Content Strategy</span>
+              <span class="project-tag">Email Marketing</span>
+              <span class="project-tag">SEO</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="project-thumb green">💻</div>
-        <div class="project-body">
-          <div class="project-type">كتابة محتوى — تقنية</div>
-          <h3>مراجعات الهواتف الذكية والتطبيقات</h3>
-          <p>كتبت 20 مراجعة مفصلة لهواتف وتطبيقات بأسلوب بسيط وشيق، كل مراجعة تصدرت نتايج البحث لكلماتها وجذبت آلاف الزوار من قوقل.</p>
-          <div class="project-tags">
-            <span class="project-tag">Tech Writing</span>
-            <span class="project-tag">Reviews</span>
-            <span class="project-tag">SEO</span>
+      <a href="https://www.example.com/tech-reviews" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb green">💻</div>
+          <div class="project-body">
+            <div class="project-type">كتابة محتوى — تقنية</div>
+            <h3>مراجعات الهواتف الذكية والتطبيقات</h3>
+            <p>كتبت 20 مراجعة مفصلة لهواتف وتطبيقات بأسلوب بسيط وشيق، كل مراجعة تصدرت نتايج البحث لكلماتها وجذبت آلاف الزوار من قوقل.</p>
+            <div class="project-tags">
+              <span class="project-tag">Tech Writing</span>
+              <span class="project-tag">Reviews</span>
+              <span class="project-tag">SEO</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="project-thumb red">📱</div>
-        <div class="project-body">
-          <div class="project-type">إدارة سوشيال ميديا</div>
-          <h3>إدارة صفحة مطعم فيسبوك لمدة 6 شهور</h3>
-          <p>أدرت صفحة المطعم بشكل يومي: محتوى جذاب، تصاميم احترافية، تفاعل مع الزبائن والرد السريع على الأسئلة. وصلت الصفحة من 500 لـ 3000 متابع.</p>
-          <div class="project-tags">
-            <span class="project-tag">Facebook</span>
-            <span class="project-tag">Canva</span>
-            <span class="project-tag">Community Management</span>
+      <a href="https://www.facebook.com/restaurant-demo" target="_blank" style="text-decoration:none;">
+        <div class="project-card">
+          <div class="project-thumb red">📱</div>
+          <div class="project-body">
+            <div class="project-type">إدارة سوشيال ميديا</div>
+            <h3>إدارة صفحة مطعم فيسبوك لمدة 6 شهور</h3>
+            <p>أدرت صفحة المطعم بشكل يومي: محتوى جذاب، تصاميم احترافية، تفاعل مع الزبائن والرد السريع على الأسئلة. وصلت الصفحة من 500 لـ 3000 متابع.</p>
+            <div class="project-tags">
+              <span class="project-tag">Facebook</span>
+              <span class="project-tag">Canva</span>
+              <span class="project-tag">Community Management</span>
+            </div>
+            <span class="project-link">شوف المشروع ↗️</span>
           </div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -543,18 +574,18 @@
     <div class="section-line" style="margin:0 auto 1.5rem;"></div>
     <p>هل عندك مشروع أو تحتاج كاتب محتوى؟ أنا هنا، بعت رسالة وهرد في أقرب وقت 👇</p>
     <div class="contact-cards">
+      <a href="https://wa.me/201093089613?text=مرحبا%20حسام%20عاوز%20أتكلم%20معاك%20عن%20مشروع" target="_blank" class="contact-card">
+        <div class="icon">💬</div>
+        <div>
+          <div class="contact-card-label">واتساب</div>
+          <div class="contact-card-value">01093089613</div>
+        </div>
+      </a>
       <a href="mailto:hossamabaas8@gmail.com" class="contact-card">
         <div class="icon">📧</div>
         <div>
           <div class="contact-card-label">البريد الإلكتروني</div>
           <div class="contact-card-value">hossamabaas8@gmail.com</div>
-        </div>
-      </a>
-      <a href="tel:01093089613" class="contact-card">
-        <div class="icon">📞</div>
-        <div>
-          <div class="contact-card-label">رقم الهاتف</div>
-          <div class="contact-card-value">01093089613</div>
         </div>
       </a>
     </div>
