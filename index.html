@@ -2,8 +2,17 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta name="google-site-verification" content="p5c0r1Q7-Mc-OK99nL_3JiqLD8v3RxHcVpAbuTBiu0Q" />
+  <link rel="sitemap" type="application/xml" href="https://hossamabaas243-dev.github.io/Hossam-abbas-portfolio/sitemap.xml">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="حسام عباس - كاتب محتوى واحترافي SEO. أساعدك في كتابة محتوى يصل لجمهورك ويتصدر محركات البحث. متخصص في كتابة المقالات والمحتوى التسويقي والـ SEO">
+<meta name="keywords" content="كاتب محتوى، SEO، تسويق رقمي، محتوى عربي، Copywriting، Canva">
+<meta name="author" content="حسام عباس">
+<meta property="og:title" content="حسام عباس — بورتفوليو">
+<meta property="og:description" content="كاتب محتوى واحترافي SEO - أساعدك في كتابة محتوى يصل لجمهورك ويتصدر محركات البحث">
+<meta property="og:url" content="https://hossamabaas243-dev.github.io/Hossam-abbas-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hossamabaas243-dev.github.io/Hossam-abbas-portfolio/og-image.jpg">
 <title>حسام عباس — بورتفوليو</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
@@ -24,19 +33,19 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,27,42,0.97);b
 .nav-links a:hover{color:var(--accent2)}
 
 /* HERO */
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a2f4a 60%,#0f3460 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a2f4a 60%,#0f3460 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 60px;position:relative}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(26,115,232,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(0,201,167,.12) 0%,transparent 50%)}
 .hero-inner{position:relative;z-index:1;max-width:700px}
-.hero-badge{display:inline-block;background:rgba(0,201,167,.15);color:var(--accent2);border:1px solid rgba(0,201,167,.3);padding:6px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:1.5rem;animation:fadeDown .6s ease both}
+.hero-badge{display:inline-block;background:rgba(0,201,167,.15);color:var(--accent2);border:1px solid rgba(0,201,167,.3);padding:6px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:1rem}
 .hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:1rem;animation:fadeDown .6s .1s ease both}
 .hero h1 span{color:var(--accent2)}
 .hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);margin-bottom:2.5rem;animation:fadeDown .6s .2s ease both}
 .hero-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:2.5rem;animation:fadeDown .6s .3s ease both}
 .tag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85);padding:7px 18px;border-radius:50px;font-size:.88rem;font-weight:500}
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeDown .6s .4s ease both}
-.btn-primary{background:var(--accent2);color:var(--navy);padding:13px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-block;font-family:'Cairo',sans-serif;cursor:pointer;border:none}
+.btn-primary{background:var(--accent2);color:var(--navy);padding:13px 32px;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-block}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,201,167,.35)}
-.btn-secondary{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);padding:13px 32px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-secondary{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);padding:13px 32px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s,background .2s;display:inline-block}
 .btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,.07)}
 
 /* SECTIONS */
@@ -61,7 +70,7 @@ section{padding:90px 5%}
 .service-card{background:var(--white);border-radius:20px;padding:2rem;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .service-card::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:0 20px 0 80px;background:linear-gradient(135deg,rgba(26,115,232,.08),rgba(0,201,167,.06))}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,115,232,.1)}
-.service-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#0d5fd9);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.2rem}
+.service-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#0d5fd9);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
 .service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.7rem}
 .service-card p{font-size:.92rem;color:var(--text2);line-height:1.7}
 
@@ -102,7 +111,7 @@ section{padding:90px 5%}
 #contact .section-line{margin:0 auto 1.5rem}
 #contact>div>p{color:rgba(255,255,255,.65);font-size:1.05rem;margin-bottom:2.5rem}
 .contact-cards{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2.5rem}
-.contact-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.2rem 2rem;display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;transition:all .2s;min-width:200px}
+.contact-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.2rem 2rem;display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;transition:background .2s,transform .2s}
 .contact-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
 .contact-card .icon{width:42px;height:42px;border-radius:12px;background:rgba(0,201,167,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
 .contact-card-label{font-size:.78rem;color:rgba(255,255,255,.5)}
@@ -176,8 +185,8 @@ footer{background:var(--navy);padding:1.5rem 5%;text-align:center;color:rgba(255
     <div class="section-line"></div>
     <div class="about-grid">
       <div class="about-text">
-        <p>أنا حسام عباس، عمري 32 سنة، خريج خدمة اجتماعية وده اللي خلّاني أفهم الناس كويس وأكتب محتوى بيوصل لقلوبهم فعلاً.</p>
-        <p>اشتغلت مع شركات ومواقع متعددة في كتابة المقالات والمحتوى التسويقي، وبشتغل على تحسين ظهور المواقع في جوجل من خلال استراتيجيات SEO محترفة.</p>
+        <p>أنا حسام عباس، عمري 32 سنة، خريج خدمة اجتماعية وده اللي خلّاني أفهم الناس كويس وأكتب محتوى بيوصل لقلوب الناس.</p>
+        <p>اشتغلت مع شركات ومواقع متعددة في كتابة المقالات والمحتوى التسويقي، وبشتغل على تحسين ظهور المواقع في محركات البحث (SEO).</p>
         <p>بجانب الكتابة، بصمم محتوى بصري احترافي على Canva وبتعلم البرمجة عشان أبقى نسخة أحسن كل يوم.</p>
         <div style="margin-top:1.5rem">
           <a href="https://wa.me/201093089613" target="_blank" class="btn-primary">💬 تواصل على واتساب</a>
@@ -348,55 +357,55 @@ const projects = {
   p1: {
     emoji: '🏥', color: 'blue', type: 'كتابة محتوى — SEO',
     title: 'مدونة صحة وتغذية',
-    desc: 'تعاون مع موقع صحي متخصص لإنشاء سلسلة مقالات SEO شاملة في مجالات التغذية والصحة العامة. الهدف كان رفع ترتيب الموقع في محركات البحث واستقطاب زوار عضويين مستهدفين.',
-    what: ['كتابة 15 مقالة SEO متكاملة بمعدل 1200-1800 كلمة للمقالة','بحث كلمات مفتاحية طويلة الذيل بمنافسة منخفضة','تحسين العناوين والـ Meta Descriptions والـ headings','ربط المقالات ببعض داخلياً لتعزيز الـ Authority','كتابة بأسلوب سهل ومفهوم يناسب القارئ العربي العادي'],
+    desc: 'تعاون مع موقع صحي متخصص لإنشاء سلسلة مقالات SEO شاملة في مجالات التغذية والصحة العامة. الهدف كان رفع ترتيب الموقع في محركات البحث.',
+    what: ['كتابة 15 مقالة SEO متكاملة بمعدل 1200-1800 كلمة للمقالة','بحث كلمات مفتاحية طويلة الذيل بمنافسة منخفضة','تحسين الـ Meta Tags والـ Headings','بناء روابط داخلية (Internal Links)'],
     tools: ['Google Keyword Planner','Yoast SEO','Google Search Console','WordPress','Google Docs'],
-    result: 'خلال 3 أشهر من النشر، تصدّرت 8 مقالات الصفحة الأولى في جوجل وارتفع عدد الزوار العضويين بنسبة 65% مقارنة بالفترة السابقة.',
+    result: 'خلال 3 أشهر من النشر، تصدّرت 8 مقالات الصفحة الأولى في جوجل وارتفع عدد الزوار العضويين بنسبة 65%',
     tags: ['SEO','كتابة مقالات','Keyword Research','WordPress','تغذية وصحة']
   },
   p2: {
     emoji: '🛍️', color: 'teal', type: 'هوية بصرية — Canva',
     title: 'هوية بصرية لمتجر ملابس إلكتروني',
-    desc: 'تصميم هوية بصرية متكاملة لمتجر ملابس نسائي على إنستجرام، بدأ من الصفر محتاج هوية واضحة وجذابة تعكس طابع البراند وتستهدف الفئة العمرية الشابة.',
-    what: ['تصميم 30 تمبليت منشور بأحجام مختلفة (فيد + ريلز + ستوري)','تحديد بالات الألوان والفونتات المناسبة للبراند','تصميم هايلايت كوفرز وبيو صفحة','تصميم بنرات للعروض والمناسبات','إنشاء دليل هوية بصرية للاستخدام المستقبلي'],
+    desc: 'تصميم هوية بصرية متكاملة لمتجر ملابس نسائي على إنستجرام، بدأ من الصفر محتاج هوية واضحة وجذابة.',
+    what: ['تصميم 30 تمبليت منشور بأحجام مختلفة (فيد + ريلز + ستوري)','تحديد بالات الألوان والفونتات المناسبة','إنشاء شعار واحترافي للبراند','تصميم غلاف Highlight جذابة'],
     tools: ['Canva Pro','Adobe Color','Instagram Guidelines','Canva Brand Kit'],
-    result: 'بعد تطبيق الهوية الجديدة، ارتفع التفاعل على المنشورات بنسبة 40% وأصبح الحساب أكثر احترافية وتماسكاً في نظر المتابعين.',
+    result: 'بعد تطبيق الهوية الجديدة، ارتفع التفاعل على المنشورات بنسبة 40% وأصبح الحساب أكثر احترافية',
     tags: ['Canva','هوية بصرية','Instagram','تصميم','Social Media']
   },
   p3: {
     emoji: '🦷', color: 'orange', type: 'كوبي رايتينج — إعلانات',
     title: 'حملة إعلانية لعيادة أسنان',
-    desc: 'عيادة أسنان في القاهرة أرادت زيادة حجوزاتها أونلاين عبر إعلانات فيسبوك وإنستجرام. المطلوب كان نصوص إعلانية مقنعة وصفحة هبوط تحول الزائر لحجز فعلي.',
-    what: ['كتابة 6 نصوص إعلانية A/B testing لمعرفة الأفضل أداءً','تصميم وكتابة صفحة هبوط متكاملة تشرح الخدمات والأسعار','كتابة محتوى الواتساب Business للرد التلقائي','كتابة كوبي لمنشورات التوعية قبل الحملة','صياغة Calls-to-Action واضحة وجذابة'],
+    desc: 'عيادة أسنان في القاهرة أرادت زيادة حجوزاتها أونلاين عبر إعلانات فيسبوك وإنستجرام.',
+    what: ['كتابة 6 نصوص إعلانية A/B testing','تصميم صفحة هبوط متكاملة','كتابة CTA قوية وفعّالة','إدارة الميزانية والبيدجت'],
     tools: ['Meta Ads Manager','Canva','WhatsApp Business','Google Docs'],
-    result: 'الحملة حققت معدل تحويل 8.5% على صفحة الهبوط وزاد عدد الحجوزات الشهرية بمقدار 35 حجز إضافي في أول شهر.',
+    result: 'الحملة حققت معدل تحويل 8.5% وزاد عدد الحجوزات الشهرية بمقدار 35 حجز في أول شهر',
     tags: ['Copywriting','Meta Ads','Landing Page','Conversion','عيادات']
   },
   p4: {
     emoji: '🏢', color: 'purple', type: 'استراتيجية محتوى',
     title: 'استراتيجية محتوى شركة عقارات',
-    desc: 'شركة عقارية متوسطة الحجم أرادت بناء حضور رقمي قوي وتحويل موقعها لمصدر جذب للعملاء المحتملين بدلاً من الاعتماد الكامل على الإعلانات المدفوعة.',
-    what: ['بناء خطة محتوى سنوية كاملة (52 أسبوع)','كتابة 20 مقالة SEO عن سوق العقارات والاستثمار','إنشاء 4 نشرات بريدية شهرية لقائمة العملاء','كتابة محتوى لينكد إن لصفحة الشركة','إعداد دليل صوت البراند والأسلوب التحريري'],
+    desc: 'شركة عقارية متوسطة الحجم أرادت بناء حضور رقمي قوي وتحويل موقعها لمصدر جذب للعملاء.',
+    what: ['بناء خطة محتوى سنوية كاملة','كتابة 20 مقالة SEO','إنشاء 4 نشرات بريدية شهرية','تحليل منافسين'],
     tools: ['Trello','Mailchimp','WordPress','Google Analytics','LinkedIn'],
-    result: 'خلال 6 أشهر أصبح الموقع يحصل على 500+ زيارة عضوية شهرية وتضاعفت قائمة الإيميل من 200 إلى 850 مشترك.',
+    result: 'خلال 6 أشهر أصبح الموقع يحصل على 500+ زيارة عضوية شهرية وتضاعفت قائمة الإيميل',
     tags: ['Content Strategy','Email Marketing','SEO','LinkedIn','عقارات']
   },
   p5: {
     emoji: '💻', color: 'green', type: 'كتابة تقنية',
     title: 'مدونة تقنية ومراجعات منتجات',
-    desc: 'موقع تقني متخصص في مراجعة الأجهزة والبرامج باللغة العربية، يحتاج محتوى احترافي يجمع بين الدقة التقنية وسهولة الفهم للقارئ العربي العادي.',
-    what: ['كتابة 25 مراجعة مفصلة لهواتف ولاب توب وإكسسوارات','كتابة مقارنات بين المنتجات المتنافسة بأسلوب محايد','تحسين كل مقال لمحركات البحث مع كلمات مفتاحية تنافسية','كتابة ملخصات سريعة للمراجعات للسوشيال ميديا','إعداد قوالب موحدة للمراجعات لسهولة التكرار'],
+    desc: 'موقع تقني متخصص في مراجعة الأجهزة والبرامج باللغة العربية يحتاج محتوى احترافي.',
+    what: ['كتابة 25 مراجعة مفصلة','كتابة مقارنات بين المنتجات','تحسين الـ SEO التقني','بناء سلطة الموقع (Domain Authority)'],
     tools: ['WordPress','Yoast SEO','Google Search Console','Canva','Ahrefs Basic'],
-    result: '12 مقالة من أصل 25 وصلت للصفحة الأولى في جوجل وأصبح الموقع مرجعاً موثوقاً في مجاله بين القراء العرب.',
+    result: '12 مقالة من أصل 25 وصلت للصفحة الأولى في جوجل وأصبح الموقع مرجع موثوق',
     tags: ['Tech Writing','Product Reviews','SEO','Arabic Content','تقنية']
   },
   p6: {
     emoji: '🍽️', color: 'red', type: 'إدارة سوشيال ميديا',
     title: 'إدارة صفحة مطعم على فيسبوك',
-    desc: 'مطعم شعبي في مصر أراد بناء تواجد قوي على فيسبوك واستقطاب زبائن جدد من خلال محتوى يومي يُشهّي ويحفّز على الزيارة.',
-    what: ['إدارة الصفحة يومياً بمعدل 1-2 منشور في اليوم','تصميم قوالب يومية لصور الأكل والعروض على Canva','كتابة كوبي تحريضي (بيع بالشهية!) لكل منشور','إدارة التعليقات والرسائل والرد على الزبائن','كتابة محتوى خاص للمناسبات (رمضان، أعياد، عروض)','تحليل أداء المنشورات واختيار أوقات النشر الأمثل'],
+    desc: 'مطعم شعبي في مصر أراد بناء تواجد قوي على فيسبوك واستقطاب زبائن جدد.',
+    what: ['إدارة الصفحة يومياً بمعدل 1-2 منشور','تصميم قوالب يومية للأكل','كتابة كوبي للعروض','تحليل Performance وPosts Analytics'],
     tools: ['Meta Business Suite','Canva Pro','Facebook Insights','Later App'],
-    result: 'خلال 4 أشهر ارتفع عدد متابعي الصفحة من 2,000 إلى 8,500 وزاد معدل الوصول الطبيعي للمنشورات 3 أضعاف.',
+    result: 'خلال 4 أشهر ارتفع عدد متاب��ي الصفحة من 2,000 إلى 8,500 وزاد الوصول 3 أضعاف',
     tags: ['Facebook','Community Management','Canva','Copywriting','مطاعم']
   }
 };
@@ -425,7 +434,7 @@ function openModal(id) {
     </div>
     <div class="modal-tags">${p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('')}</div>
     <div class="modal-cta-row">
-      <a href="https://wa.me/201093089613?text=مرحباً حسام، شفت أعمالك وعايز أتكلم معاك في مشروع" target="_blank" class="btn-primary">💬 ناقشني في مشروع مشابه</a>
+      <a href="https://wa.me/201093089613?text=مرحباً حسام، شفت أعمالك وعايز أتكلم معاك في مشروع" target="_blank" class="btn-primary">💬 ناقشني في مشروع</a>
     </div>`;
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
